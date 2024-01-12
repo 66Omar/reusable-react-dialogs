@@ -17,15 +17,12 @@ const DialogComponent: React.FC<{}> = () => {
     dialog?.cancelable ?? setDialog(null)
   }
 
-  function handleClick(e: any) {
-    console.log(e)
-  }
 
   return (
     dialog && (
       <div className="dialog-container">
         <div className="overlay" onClick={onOverlayClick}></div>
-        <div autoFocus className="mdialog" onKeyDown={handleClick}>
+        <div autoFocus className="mdialog">
           <h2 className="mb-4">{dialog.header}</h2>
           <p className="mb-4">{dialog.body}</p>
           <button
